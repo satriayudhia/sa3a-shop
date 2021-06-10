@@ -4,6 +4,7 @@ import { ProductCard } from '@components/product'
 import { Grid, Marquee, Hero } from '@components/ui'
 // import HomeAllProductsGrid from '@components/common/HomeAllProductsGrid'
 import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
+import Head from "next/head"
 
 export async function getStaticProps({
   preview,
@@ -37,6 +38,9 @@ export default function Home({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
+    <Head>
+      <meta name="google-site-verification" content="DbPb3qtNrIW8_uA7vvOtByPO4FiTnU67Ab-Zb91HVnI" />
+    </Head>
       <Grid>
         {products.slice(0, 3).map((product, i) => (
           <ProductCard
